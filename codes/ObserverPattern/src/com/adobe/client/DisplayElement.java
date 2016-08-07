@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.adobe.client;
+
+/**
+ * @author danchara
+ *
+ */
+public interface DisplayElement {
+	void display();
+
+}

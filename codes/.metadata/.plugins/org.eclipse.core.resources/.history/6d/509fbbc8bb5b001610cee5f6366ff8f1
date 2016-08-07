@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+package com.adobe.client;
+
+import com.adobe.server.WeatherObject;
+
+/**
+ * @author danchara
+ *
+ */
+public class WeatherApplication {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println("Creating a Subject,here WeatherObject");
+		WeatherObject weatherObject = new WeatherObject();
+		
+		System.out.println("Creatinng new observer , here CurrentConditionsDisplay");
+		CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherObject);
+		
+		System.out.println("Registering new observer,here CurrentConditionsDisplay");
+		weatherObject.registerObserver(currentConditionsDisplay);
+		
+		System.out.println("Initial display on CurrentConditionsDisplay");
+		currentConditionsDisplay.display();
+		
+		System.out.println("WeatherObject starts notifying observers");
+		
+		for (int i = 0; i < 5; i++) {
+			
+			weatherObject.notifyObservers();
+			System.out.println();
+			
+		}
+	}
+
+}

@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.adobe.client;
+
+/**
+ * @author danchara
+ *
+ */
+public class CurrentConditionsDisplay implements DisplayElement, Observer {
+
+	/* (non-Javadoc)
+	 * @see com.adobe.client.Observer#update()
+	 */
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+
+	}
+
+	/* (non-Javadoc)
+	 * @see com.adobe.client.DisplayElement#display()
+	 */
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

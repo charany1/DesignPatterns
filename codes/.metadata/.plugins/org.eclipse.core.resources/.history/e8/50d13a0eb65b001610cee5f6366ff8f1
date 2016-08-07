@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package com.adobe.client;
+
+import com.adobe.server.WeatherObject;
+
+/**
+ * @author danchara
+ *
+ */
+public class CurrentConditionsDisplay implements DisplayElement, Observer {
+	
+	
+	WeatherObject weatherObject ;
+	
+	int temp;
+	int humidity;
+	
+	
+	
+	
+	public CurrentConditionsDisplay(WeatherObject weatherObject) {
+		super();
+		this.weatherObject = weatherObject;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.adobe.client.Observer#update()
+	 * 
+	 * get updated values from WeatherObject upon being notified
+	 * called in WeatherObject#notify
+	 */
+	@Override
+	public void update() {
+		temp = weatherObject.getTemparature();
+		humidity = weatherObject.getHumidity();
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see com.adobe.client.DisplayElement#display()
+	 */
+	@Override
+	public void display() {
+		System.out.println("Temparature :"+temp+ "\n Humidity :"+humidity);
+	}
+
+}

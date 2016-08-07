@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.adobe.server;
+
+import java.util.List;
+
+import com.adobe.client.Observer;
+
+/**
+ * @author danchara
+ *
+ */
+public class WeatherObject implements Subject{
+	
+	List<Observer> observerList;
+
+	@Override
+	public void registerObserver(Observer observer) {
+		observerList.add(e)
+	}
+
+	@Override
+	public void removeObserver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
