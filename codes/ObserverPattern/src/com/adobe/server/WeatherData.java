@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 import com.adobe.client.Observer;
+import com.adobe.server.entity.DataPacket;
 
 /**
  * @author danchara
@@ -15,7 +16,7 @@ import com.adobe.client.Observer;
  */
 public class WeatherData implements Subject{
 	
-	int temp , humidity;
+	DataPacket dataPacket = new DataPacket(0,0);
 	
 	public static List<Observer> observerList = new ArrayList<Observer>();
 
@@ -32,25 +33,19 @@ public class WeatherData implements Subject{
 	@Override
 	public void notifyObservers() {
 		for(Observer observer :observerList){
-			observer.update();
+			observer.update(dataPacket);
 		}
 	}
 	
-	public int getTemparature(){
-		return  temp;
-	}
 	
-	public int getHumidity(){
-		return humidity;
-	}
 	
 	/*
 	 * This methods updates new temp and humidity each time it get new data from backend
 	 * hardware device.
 	 * */
 	public void measurementsChanged(){
-		temp = ThreadLocalRandom.current().nextInt(20, 30 + 1);
-		humidity = ThreadLocalRandom.current().nextInt(50, 60 + 1);
+		dataPacket.setTemp(ThreadLocalRandom.current().nextInt(20, 30 + 1));
+		dataPacket.setHumidity(ThreadLocalRandom.current().nextInt(50, 60 + 1));
 		notifyObservers();
 				
 		

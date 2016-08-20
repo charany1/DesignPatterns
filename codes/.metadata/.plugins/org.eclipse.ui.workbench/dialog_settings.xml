@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="471" key="DIALOG_X_ORIGIN"/>
+		<item value="45" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="250" key="dialogHeight"/>
+		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.egit.ui.GitRepositoryExploring"/>
+			<item value="org.eclipse.jdt.ui.CompilationUnitEditorObserverPattern/src/com/adobe/client/Observer.java"/>
+			<item value="org.eclipse.jdt.ui.CompilationUnitEditorObserverPattern/src/com/adobe/client/WeatherApplication.java"/>
+			<item value="org.eclipse.jdt.ui.CompilationUnitEditorObserverPattern/src/com/adobe/client/displays/CurrentConditionsDisplay.java"/>
+			<item value="org.eclipse.ui.console.ConsoleView"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.perspectives"/>
+			<item value="org.eclipse.ui.editors"/>
+			<item value="org.eclipse.ui.editors"/>
+			<item value="org.eclipse.ui.editors"/>
+			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
+			<item value="git"/>
+			<item value="obser"/>
+			<item value="weat"/>
+			<item value="curre"/>
+			<item value="conso"/>
 		</list>
 	</section>
 </section>

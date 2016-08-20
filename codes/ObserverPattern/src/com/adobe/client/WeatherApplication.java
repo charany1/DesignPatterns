@@ -25,10 +25,10 @@ public class WeatherApplication {
 		WeatherData weatherData = new WeatherData();
 		
 		System.out.println("Creatinng new observer , here CurrentConditionsDisplay");
-		CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
+		CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay();
 		
 		System.out.println("Creating a new observer , here StatsDisplay");
-		StatsDisplay statsDisplay = new StatsDisplay(weatherData);
+		StatsDisplay statsDisplay = new StatsDisplay();
 		
 	
 		

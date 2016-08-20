@@ -5,28 +5,24 @@ package com.adobe.client.displays;
 
 import com.adobe.client.DisplayElement;
 import com.adobe.client.Observer;
-import com.adobe.server.WeatherData;
+import com.adobe.server.entity.DataPacket;
 
 /**
  * @author danchara
  * 
- * Class used to display stats : max temp , min temp , max humidity , min humidty in app.
+ * Class used to display stats : max temp , min temp , max humidity , min humidity in app.
  *
  */
 public class StatsDisplay implements DisplayElement , Observer{
 	
 	int maxTemp , maxHumidity ;
 	
-	WeatherData weatherData ;
 	
-	public  StatsDisplay(WeatherData weatherData) {
-		this.weatherData = weatherData;
-	}
 	
 	@Override
-	public void update() {
-		this.maxTemp = Integer.max(maxTemp, weatherData.getTemparature());
-		this.maxHumidity = Integer.max(maxHumidity, weatherData.getHumidity());
+	public void update(DataPacket dataPacket) {
+		this.maxTemp = Integer.max(maxTemp, dataPacket.getTemp());
+		this.maxHumidity = Integer.max(maxHumidity, dataPacket.getHumidity());
 		
 	}
 

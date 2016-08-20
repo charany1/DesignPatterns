@@ -6,7 +6,7 @@ package com.adobe.client.displays;
 
 import com.adobe.client.DisplayElement;
 import com.adobe.client.Observer;
-import com.adobe.server.WeatherData;
+import com.adobe.server.entity.DataPacket;
 
 /**
  * @author danchara
@@ -15,7 +15,7 @@ import com.adobe.server.WeatherData;
 public class CurrentConditionsDisplay implements DisplayElement, Observer {
 	
 	
-	WeatherData weatherData ;
+	
 	
 	int temp ;
 	int humidity;
@@ -23,10 +23,7 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer {
 	
 	
 	
-	public CurrentConditionsDisplay(WeatherData weatherData) {
-		super();
-		this.weatherData = weatherData;
-	}
+	
 
 	/* (non-Javadoc)
 	 * @see com.adobe.client.Observer#update()
@@ -35,9 +32,9 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer {
 	 * called in WeatherData#notify
 	 */
 	@Override
-	public void update() {
-		temp = weatherData.getTemparature();
-		humidity = weatherData.getHumidity();
+	public void update(DataPacket dataPacket) {
+		this.temp = dataPacket.getTemp();
+		this.humidity = dataPacket.getHumidity();
 		
 	}
 

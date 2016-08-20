@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.adobe.server.Subject"/>
-<fullyQualifiedTypeName name="com.adobe.client.Observer"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.sun.java.swing.plaf.windows.WindowsOptionPaneUI"/>
 <fullyQualifiedTypeName name="com.adobe.server.WeatherObject"/>
 <fullyQualifiedTypeName name="com.adobe.client.CurrentConditionsDisplay"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.adobe.client.DisplayElement"/>
+<fullyQualifiedTypeName name="com.adobe.client.Observer"/>
+<fullyQualifiedTypeName name="com.adobe.server.WeatherData"/>
+<fullyQualifiedTypeName name="com.adobe.client.displays.StatsDisplay"/>
+<fullyQualifiedTypeName name="com.adobe.server.Subject"/>
+<fullyQualifiedTypeName name="com.adobe.server.DataPacket"/>
 </qualifiedTypeNameHistroy>
